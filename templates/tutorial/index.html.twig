@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my Symfony Tutorial App</title>
+    {{ encore_entry_link_tags('app') }}
+</head>
+{% endblock %}
+
+<body>
+<main>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 text-primary btn-outline-dark">Symfony Tutorial App</span>
+        </div>
+    </nav>
+    <div class="container box p-3 shadow my-5 bg-light w-50">
+        <h3>Symfony check list ({{ task_list|length }})</h3>
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <th></th>
+                    <th> </th>
+                    <th> </th>
+                </thead>
+                <tbody>
+
+                {% for index,task in task_list %}
+                    <tr>
+                        <td>{{  index  }}</td>
+                        <td>
+                            <input name="chkBox_1" type="checkbox" value="{{ task }}" readonly class="form-check-input">
+                        </td>
+                        <td>{{  task  }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+{% block javascript %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+</html>

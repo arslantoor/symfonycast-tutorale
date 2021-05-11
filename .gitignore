@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> e49b1dfe5b045318f40db073ccb2cd632608db0f
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -8,3 +11,13 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+<<<<<<< HEAD
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+=======
+>>>>>>> e49b1dfe5b045318f40db073ccb2cd632608db0f
